@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sensor value from ESP8266</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3csstemplate.css">
+<link rel="icon" href="/1024px-Logo_Dai_hoc_Can_Tho.svg.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="/cssfile.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h2 class="w3-padding-64"><b>Can Tho<br>University</b></h2>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sensor value</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">AVG value</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Value table</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Can Tho University</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main" style="margin-left:400px;margin-right:40px">
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:0px" id="showcase">
+    <div class="h2"> 
+      <h2>All sensor value</h2>
+    </div>
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+
+    <div class="w3-half">
+      <h3 class="h3"><b>First sensor</b></h3>
+      <iframe width="450" height="260" style="border: 4px solid #cccccc;" src="https://thingspeak.com/channels/1719296/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+    </div>
+
+    <div class="w3-half">
+      <h3 class="h3"><b>Second sensor</b></h3>
+      <iframe width="450" height="260" style="border: 4px solid #cccccc;" src="https://thingspeak.com/channels/1719296/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+
+    </div>
+    <div class="w3-half">
+      <h3 class="h3"><b>Third sensor</b></h3>
+      <iframe width="450" height="260" style="border: 4px solid #cccccc;" src="https://thingspeak.com/channels/1719296/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+    </div>
+
+    <div class="w3-half">
+      <h3 class="h3"><b>Fourth sensor</b></h3>
+      <iframe width="450" height="260" style="border: 4px solid #cccccc;" src="https://thingspeak.com/channels/1719296/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Services -->
+  <div class="w3-main" style="margin-left:420px;margin-right:40px;margin-top:70px" id="services" >
+    <div class="h2"> 
+      <h2>AVG value</h2>
+    </div>
+    <iframe width="1010" height="442" style="border: 4px solid #cccccc;" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9dXqGDg-mXaaaC3fvXCNIXQ-UECS9rAxnO-cSuN8NeBWyvkVUOIMMDnDvPsGwnEi-8t2EeSybB4SI/pubchart?oid=1923134173&amp;format=interactive"></iframe>
+    <iframe width="1010" height="442" style="border: 4px solid #cccccc;"scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9dXqGDg-mXaaaC3fvXCNIXQ-UECS9rAxnO-cSuN8NeBWyvkVUOIMMDnDvPsGwnEi-8t2EeSybB4SI/pubchart?oid=211615190&amp;format=interactive"></iframe>
+  </div>
+  
+  <!-- Contact -->
+    <div class="w3-main" style="margin-left:420px;margin-right:40px;margin-top:70px" id="contact" >
+      <div class="h2"> 
+        <h2>Value table</h2>
+      </div>
+      <div class="fa">
+        <iframe width="760" height="500" style="border: 4px solid #cccccc;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9dXqGDg-mXaaaC3fvXCNIXQ-UECS9rAxnO-cSuN8NeBWyvkVUOIMMDnDvPsGwnEi-8t2EeSybB4SI/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false"></iframe>
+      </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:0px">
+  
+  <div class="footer">
+    <h4>
+        Mentor Contact: <a href="https://www.facebook.com/vankhanh.mkd" target="_blank" style="color: #000;">Nguyen Van Khanh</a> <br>
+        Student Contact: <a href="https://facebook.com/tranduypower" target="_blank" style="color: #000;">TQDuysuke</a>
+    <h4>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
